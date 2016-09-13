@@ -11,7 +11,7 @@ module.exports = options => {
   try {
     const wss = new WebSocketServer({port: options.port}, logError);
 
-    console.log('Server listening on port', options.port);
+    console.log('Server escuchando on port', options.port);
 
     wss.on('error', logError);
 
