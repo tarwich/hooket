@@ -1,0 +1,32 @@
+{
+  "name": "hooket",
+  "version": "0.1.0",
+  "description": "Socket Webhook bridge",
+  "main": "index.js",
+  "engines": {
+    "node": "6.4.0",
+    "npm": "3.10.3"
+  },
+  "directories": {},
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarwich/hooket.git"
+  },
+  "keywords": [],
+  "author": "Samuel Dillow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tarwich/hooket/issues"
+  },
+  "homepage": "https://github.com/tarwich/hooket#readme",
+  "dependencies": {
+    "minimist": "1.2.0",
+    "ws": "1.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-tarwich": "github:tarwich/eslint-config-tarwich"
+  }
+}
