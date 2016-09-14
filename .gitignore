@@ -1,0 +1,11 @@
+# ----------[ Application ]----------------------------------------
+# Transient config files
+config.*.js
+# The keys
+id_rsa*
+# The dependencies
+node_modules
+
+# ----------[ Metadata ]----------------------------------------
+# OS X
+.DS_Store
