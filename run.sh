@@ -11,7 +11,7 @@ git pull
 NEW_HASH=$(git rev-parse HEAD)
 
 # If the hashes have changed then we're going to need to redeploy
-if [ ! $(docker ps -qa --filter label=$NEW_HASH) ] ; then
+if [ -z $(docker ps -qa --filter label=rev=$NEW_HASH) ] ; then
   # Kill the current image
   ID=$(docker ps -qa --filter name=$NAME)
   if [ -n "$ID" ] ; then
@@ -21,7 +21,7 @@ if [ ! $(docker ps -qa --filter label=$NEW_HASH) ] ; then
 fi
 
 # Run hooket
-ID=$(docker ps -q --filter name=$NAME)
+ID=$(docker ps -qa --filter name=$NAME)
 
 if [ -z "$ID" ] ; then
   docker build --rm -t $NAME $REPO
