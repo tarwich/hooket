@@ -16,6 +16,12 @@ if [ "$CURRENT_HASH" != "$NEW_HASH" ] ; then
   if [ -n "$ID" ] ; then
     docker kill $ID
   fi
+fi
+
+# Run hooket
+ID=$(docker ps -aq --filter name=$NAME)
+
+if [ -z "$ID" ] ; then
   docker build --rm -t $NAME $REPO
-  docker run -d --name $NAME $REPO
+  docker run -d --name $NAME $NAME start
 fi
